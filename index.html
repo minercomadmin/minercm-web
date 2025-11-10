@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minerales, Caolines y Compuestos Cerámicos S.L. — Minercom</title>
+  <meta name="description" content="Minercom: comercio al por mayor de materiales de construcción, áridos, vidrio y asesoramiento técnico para el sector de la construcción.">
+  <meta property="og:title" content="Minercom">
+  <meta property="og:description" content="Materiales de construcción, áridos y asesoramiento para el sector.">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+  <header class="w-full bg-white shadow">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="text-2xl font-semibold tracking-tight">Minercom</div>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#inicio" class="hover:text-blue-600">Inicio</a>
+        <a href="#productos" class="hover:text-blue-600">Productos</a>
+        <a href="#sobre" class="hover:text-blue-600">Sobre nosotros</a>
+        <a href="#contacto" class="hover:text-blue-600">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio" class="max-w-6xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6">Minerales, Caolines y Compuestos Cerámicos S.L.</h1>
+    <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10">Comercio al por mayor de materiales de construcción, áridos, vidrio y artículos de instalación. Asesoramiento y asistencia técnica para empresas del sector de la construcción.</p>
+    <div class="w-full h-64 bg-gray-200 rounded-xl flex items-center justify-center">Espacio para imagen principal</div>
+  </section>
+
+  <section id="productos" class="bg-white py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-center">Productos</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-gray-100 rounded-xl p-6 h-56 flex items-center justify-center">Imagen / Producto 1</div>
+        <div class="bg-gray-100 rounded-xl p-6 h-56 flex items-center justify-center">Imagen / Producto 2</div>
+        <div class="bg-gray-100 rounded-xl p-6 h-56 flex items-center justify-center">Imagen / Producto 3</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" class="max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-3xl font-bold mb-6 text-center">Sobre nosotros</h2>
+    <p class="text-lg max-w-3xl mx-auto leading-relaxed text-center">En Minercom nos dedicamos al suministro y distribución de materiales de construcción, áridos y compuestos cerámicos para diferentes sectores industriales. Ofrecemos soluciones fiables, suministro estable y asesoramiento especializado.</p>
+    <div class="w-full h-64 bg-gray-200 rounded-xl mt-10 flex items-center justify-center">Espacio para imagen corporativa</div>
+  </section>
+
+  <section id="contacto" class="bg-white py-20">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-10 text-center">Contacto</h2>
+      <div class="grid gap-6">
+        <input id="nombre" type="text" placeholder="Nombre" class="p-3 rounded border border-gray-300">
+        <input id="correo" type="email" placeholder="Correo electrónico" class="p-3 rounded border border-gray-300">
+        <textarea id="mensaje" placeholder="Mensaje" rows="5" class="p-3 rounded border border-gray-300"></textarea>
+        <button id="btn-mailto" class="bg-blue-600 text-white p-3 rounded hover:bg-blue-700">Enviar por correo</button>
+        <p class="text-sm text-gray-500 text-center">Este botón abrirá tu aplicación de correo. Cambia info@minercom.es por tu email si usas otro.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-900 text-white py-6 text-center mt-20">
+    Minercom © 2025
+  </footer>
+
+  <script>
+    document.getElementById('btn-mailto').addEventListener('click', function () {
+      var nombre = encodeURIComponent(document.getElementById('nombre').value || '');
+      var correo = encodeURIComponent(document.getElementById('correo').value || '');
+      var mensaje = encodeURIComponent(document.getElementById('mensaje').value || '');
+      var body = `Nombre: ${nombre}%0AEmail: ${correo}%0A%0A${mensaje}`;
+      window.location.href = `mailto:info@minercom.es?subject=Contacto%20web%20Minercom&body=${body}`;
+    });
+  </script>
+
+</body>
+</html>
